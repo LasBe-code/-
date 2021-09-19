@@ -1,8 +1,151 @@
+body {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.lasbe-logo {
+    height: 13px;
+    margin: 0 auto;
+}
+.copyright-text {
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    color: #7c7c7c;
+}
 article {
     display: flex;
     flex-direction: column;
 }
-
+.main-title {
+    font-size: 14px;
+    color: #7c7c7c;
+}
+.sub-title {
+    font-size: 24px;
+    font-weight: 100;
+    color: #ebebeb;
+}
+.start-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-start {
+    font-size: 16px;
+    color:#e9c600;
+    background-color: #1f1f1f;
+    border:#1f1f1f;
+}
+.btn-start, .btn-start:visited, .btn-start:active {
+    font-size: 16px;
+    color:#e9c600;
+    background-color: #1f1f1f;
+    border:#1f1f1f;
+}
+.btn-start:active, .btn-start:focus , .btn-start:hover {
+    background-color: #ffee00 !important;
+    border:#1f1f1f !important;
+    font-size: 16px;
+    color:#ffffff;
+}
+/* 문제화면 */
 .question {
     display: none;
+}
+
+.result{
+    display: none;
+}
+.progress-bar {
+    background-color: #e9c600;
+}
+.progress {
+    background-color: #525764;
+}
+#img {
+    height: 90%;
+    margin: 0 auto;
+    max-width: 350px;
+}
+#img_q {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 350px;
+}
+.btn-answer, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
+    background-color: #1f1f1f;
+    border:#1f1f1f;
+    width: 288px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #ffffff;
+    outline: none;
+}
+.btn-answer:hover {
+    background-color: #e9c600 !important;
+    border:#1f1f1f !important;
+    width: 288px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #ffffff;
+    outline: none;
+}
+.question-content {
+    font-size: 16px;
+    color: #e9c600;
+}
+.rectangle {
+    width: 288px;
+    height: 8px;
+    background-color: #383a43;
+    margin: 0 auto;
+}
+.rectangle_q {
+    width: 15px;
+    height: 15px;
+    background-color: #e9c600;
+    margin: 0 auto;
+}
+.mid-rectangle {
+    width: 288px;
+    height: 1px;
+    background-color: #383a43;
+    margin: 0 auto;
+}
+
+
+/*결과화면*/
+.share {
+    margin: 0 auto;
+}
+.rectangle-r {
+    width: 288px;
+    height: 8px;
+    background-color: #ffe02d;
+    margin: 0 auto;
+}
+.result-message {
+    color: #e9c600;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 100;
+}
+.result-subTitle {
+    font-size: 16px;
+    font-weight: 100;
+    color: #ebebeb;
+}
+.result-mainTitle {
+    font-size: 25px;
+    font-weight: 100;
+    color: #ebebeb;
+}
+.result-explain {
+    font-size: 13px;
+    font-weight: normal;
+    color: #e9c600;
+}
+.kakao_ad {
+    width: 320px;
+    margin: 0 auto;
 }

@@ -1,36 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>롤 심리테스트</title>
+    <meta name="description" content="리그 오브 레전드를 플레이하며 겪는 상황들로, 심리를 추측하는 테스트입니다.">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="롤 심리테스트">
+    <meta property="og:description" content="리그 오브 레전드를 플레이하며 겪는 상황들로, 심리를 추측하는 테스트입니다.">
+    <meta property="og:image" content="https://lolpersonalitytest.netlify.app/icon.png">
+    <meta property="og:url" content="https://lolpersonalitytest.netlify.app/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="container">
     <article class="start">
-        <h1 class="mt-5 text-center">협곡에서의 당신은?</h1>
-        <button type="button" class="btn btn-primary mt-5" onclick='start();'>테스트 시작하기</button>
+        <h1 class="main-title mt-5 text-center">롤 심리테스트</h1>
+        <h2 class="sub-title mt-3 text-center">협곡에서 알아보는 나의 심리는?</h1>
+        <div class="rectangle-r mt-5"></div>
+        <div class="start-cover">
+            <button type="button" class="btn-start btn btn-primary mt-2 mb-2" onclick='start();'>게임 시작하기</button>
+        </div>
+        <div class="rectangle-r"></div>
     </article>
     <article class="question">
-        <div class="progress mt-5">
+        <div class="progress mt-2">
             <div class="progress-bar" role="progressbar" style="width: 100*1/16%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-        <h2 id="title" class="text-center mt-5">문제</h2>
-        <button id="A" type="button" class="btn btn-primary mt-5">Primary</button>
-        <button id="B" type="button" class="btn btn-primary mt-5">Primary</button>
-        <button id="C" type="button" class="btn btn-primary mt-5">Primary</button>
+        <h2 id="title" class="question-content text-center mt-3 mb-3">문제</h2>
+        <img id = "img_q" class = "rounded" src="A.png" alt = "question">
+        <div class="rectangle mt-3"></div>
+        <button id="A" type="button" class="btn-answer pt-4 pb-4">Primary</button>
+        <div class="mid-rectangle"></div>
+        <button id="B" type="button" class="btn-answer pt-4 pb-4">Primary</button>
+        <div class="mid-rectangle"></div>
+        <button id="C" type="button" class="btn-answer pt-4 pb-4">Primary</button>
+        <div class="rectangle"></div>
     </article>
+    <article class ="result">
+        <div class="rectangle-r mt-3"></div>
+        <span class="result-message mt-2 mb-2">협곡에서 나의 성향은?</span>
+        <div class="rectangle-r"></div>
+        <img id = "img" class = "mt-3" src="A.png" alt = "profile">
+        <h3 id="subTitle" class = "result-subTitle text-center mt-5">~~하는 당신은</h3>
+        <h2 id="mainTitle" class = "result-mainTitle text-center mt-2">xxx</h2>
+        <div class="rectangle mt-2"></div>
+        <h3 id="explain" class = "result-explain text-center mt-3">설명</h3>
+        <div class="share addthis_inline_share_toolbox"></div>
+    </article>
+    <article class="kakao_ad mt-5">
+        <ins class="kakao_ad_area" style="display:none;" 
+        data-ad-unit    = "DAN-wndTeVBmC0miJjxm" 
+        data-ad-width   = "320" 
+        data-ad-height  = "100"></ins> 
+    </article>
+
+    <article class="logo">
+        <img class="mt-5 lasbe-logo" src="logo.png" alt="lasbe-logo">
+        <span class="mt-2 text-center copyright-text">Copyright 2021 LasBe all rights reserved</span>
+    </article>
+
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
     <input id="score" type="hidden"  value="0">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script>
         var num = 1;
         var q = {
-            1: {"title": "문제 1번", "type": "score", "A": "E", "B": "i", "C": "C"},
-            2: {"title": "문제 2번", "type": "score", "A": "E", "B": "i", "C": "C"},
-            3: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"}
+            1: {"title": "팀원의 전적을 확인하니 승급전 중인 팀원이 있다.", "type": "score", "img": "1.jpg",
+            "A": "평소보다 집중해서 게임을 한다", "B": "그냥 별 생각 없다. 하던대로 플레이한다", "C": "왜인지는 모르겠으나 웃음부터 나온다"},
+            2: {"title": "게임 시작 직후의 행동", "type": "score", "img": "2.jpg",
+            "A": "상대가 우리진영으로 들어오나 확인만 한다", "B": "팀원에게 맞춰 간다", "C": "일단 상대 진영에 들어가 팀원을 부른다"},
+            3: {"title": "아무리 봐도 안될 싸움을 하려는 팀원이 있다.", "type": "score", "img": "3.jpg",
+            "A": "일단 도와준다", "B": "안될 싸움이니 무시한다", "C": "무수한 빽핑과 채팅을 날려준다"},
+            4: {"title": "솔킬 직전 팀원이 툭 친 공격에 킬을 뺐겼다.", "type": "score", "img": "4.jpg",
+            "A": "킬을 누가 먹으나 상관없다고 생각한다", "B": "뭐하는거냐고 물어본다", "C": "게임을 던질까 말까 고민해본다"},
+            5: {"title": "팀원이 챔피언과 맞지 않는 아이템을 구매해 왔다.", "type": "score", "img": "5.jpg",
+            "A": "이유를 물어본다", "B": "아이템 핑을 찍는다", "C": "템을 바꿔오라고 재촉한다"},
+            6: {"title": "라인전도중 팀원이 어이없는 실수로 상대라이너에게 킬을 내주었다.", "type": "score", "img": "6.jpg",
+            "A": "격려의 메세지를 보낸다.", "B": "묵묵하게 플레이한다.", "C": "무수한 물음표핑과 본인의 짜증을 어필한다."},
+            7: {"title": "팀원을 도와주려 갔다가 상황이 좋지 않아 싸움에서 졌다.", "type": "score", "img": "7.jpg",
+            "A": "바로 사과한다.", "B": "입을 다물고 있는다", "C": "분명 나보다 잘못한 사람을 찾아내<br>무엇을 잘못한지 알려준다."},
+            8: {"title": "상대팀이 계속해서 자신을 자극하는 채팅을 친다.", "type": "score", "img": "8.jpg",
+            "A": "분하지만 상대하지 않고 차단한다.", "B": "상대가 실수할때 까지 기다렸다가<br>이때다 싶으면 되갚아준다.", "C": "이제 게임의 승패는 중요하지 않다<br>바로 100분 토론."},
+            9: {"title": "팀원이 자신의 잘못을 계속해서 물고 늘어진다.", "type": "score", "img": "9.jpg",
+            "A": "차단하고 내 할일 한다.", "B": "똑같이 대응 해준다.", "C": "바로 모든 아이템을 팔아버리고<br>6 여눈을 구입한다."},
+            10: {"title": "팀원이 뜻대로 되지 않자 게임을 던진다.", "type": "score", "img": "10.jpg",
+            "A": "다시 게임에 복귀시키려 다독인다.", "B": "패배를 직감하고 서렌을 준비한다.", "C": "너무 괘씸하다. 채팅으로 혼내준다."},
+            11: {"title": "상대방이 어이없는 실수로 게임을 던졌다.", "type": "score", "img": "11.jpg",
+            "A": "게임을 이길 생각에 기분이 좋아진다.", "B": "전체채팅으로 웃어준다.", "C": "상대방의 멘탈을 깨버릴<br>절호의 기회라 생각한다."},
+            12: {"title": "나와 상대방이 딸피인 상황. 상대방이 타워에서 귀환하고 있다.", "type": "score", "img": "12.jpg",
+            "A": "다른 상대방이 올 수 있어서 포기한다.", "B": "위험을 무릅쓰고<br>타워밖에서 스킬을 던져본다.", "C": "무조건 잡는다는 생각으로 다이브한다."},
+            13: {"title": "팀원의 슈퍼 플레이로 게임을 승리했다.", "type": "score", "img": "13.jpg",
+            "A": "고마움에 칭찬을 아끼지 않는다.", "B": "쿨하게 감정표현을 날려준다.", "C": "배 아파서 가만히 있는다."},
+            14: {"title": "승리와 직결되는 한타 대패 후", "type": "score", "img": "14.jpg",
+            "A": "아쉽지만 어쩔수 없다고 생각한다.", "B": "무엇이 잘못되었는지 의견을 나눈다.", "C": "범인을 색출해서 마녀사냥을 시작한다."},
+            15: {"title": "게임 승리 직전", "type": "score", "img": "15.jpg",
+            "A": "뭘고민하나. 넥서스를 바로 터뜨린다.", "B": "혹시 모르니 넥서스 체력을 줄이고<br>부활하는 상대방을 잡아준다", "C": "어짜피 이긴 게임이다. 바로 우물 다이브."},
+            16: {"title": "게임이 마무리 되었다. 당신에게 가장 중요한 행동은?", "type": "score", "img": "16.jpg",
+            "A": "가장 잘했다고 생각하는 팀원에게 명예 주기", "B": "자신의 기여도 확인하기<br>(딜량, 받은 피해량 등)", "C": "결과창에서 채팅"},
+        }
+
+        var result = {
+            "A": {"subTitle": "당하고만 사는 당신은", "mainTitle": "<strong>흑우</strong>", 
+            "explain": "주변에서 착하다거나, 성격 좋다는 말을 많이 듣는 편이에요.<br>거절을 잘 못하는 성격이에요.<br>단호함을 가질 필요가 있어요.", "img": "A.png"},
+            "B": {"subTitle": "득도의 경지에 오른 당신은", "mainTitle": "<strong>부처</strong>", 
+            "explain": "인내심이 좋은 편이에요.<br>해야할 일을 바로바로 처리하는 편이에요.<br>긍정적인 시각을 가지고 있어요.", "img": "B.png"},
+            "C": {"subTitle": "화합을 도모하는 당신은", "mainTitle": "<strong>중재자</strong>", 
+            "explain": "", "img": "C.png"},
+            "D": {"subTitle": "게임을 게임답게", "mainTitle": "<strong>즐기는 자</strong>", 
+            "explain": "", "img": "D.png"},
+            "E": {"subTitle": "승리를 위해 달리는 당신은", "mainTitle": "<strong>경주마</strong>", 
+            "explain": "", "img": "E.png"},
+            "F": {"subTitle": "막을 수 없는 당신은", "mainTitle": "<strong>불도저</strong>", 
+            "explain": "", "img": "F.png"},
+            "G": {"subTitle": "타인의 고통을 즐기는 당신은", "mainTitle": "<strong>사이코패스</strong>", 
+            "explain": "", "img": "G.png"}
         }
         function start() {
             $(".start").hide();
@@ -56,14 +142,36 @@
             next();
         });
         function next(){
-            $(".progress-bar").attr('style', 'width: calc(100/16*'+num+'%)')
-            $("#title").html(q[num]["title"]);
-            $("#type").val(q[num]["type"]);
-            $("#A").html(q[num]["A"]);
-            $("#B").html(q[num]["B"]);
-            $("#C").html(q[num]["C"]);
-            num++;
+            if(num == 17){
+                $(".question").hide();
+                $(".result").show();
+                var resultScore = $("#score").val();
+                var perType = "";
+                if(resultScore<=3){perType = "A";}
+                if(resultScore>=4 && resultScore<=7){perType = "B";}
+                if(resultScore>=8 && resultScore<=13){perType = "C";}
+                if(resultScore>=14 && resultScore<=19){perType = "D";}
+                if(resultScore>=20 && resultScore<=24){perType = "E";}
+                if(resultScore>=25 && resultScore<=28){perType = "F";}
+                if(resultScore>=29){perType ="G";}
+                $("#img").attr("src", result[perType]["img"]);
+                $("#subTitle").html(result[perType]["subTitle"]);
+                $("#mainTitle").html(result[perType]["mainTitle"]);
+                $("#explain").html(result[perType]["explain"]);
+            }
+            else{
+                $("#img_q").attr("src", q[num]["img"]);
+                $(".progress-bar").attr('style', 'width: calc(100/16*'+num+'%)')
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                $("#C").html(q[num]["C"]);
+                num++;
+            }
         }
     </script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6145fcd7eeea8f34"></script>
+
 </body>
 </html>
