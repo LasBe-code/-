@@ -63,14 +63,16 @@ article {
     background-color: #525764;
 }
 #img {
-    height: 90%;
+    width: 90%;
+    height: auto;
     margin: 0 auto;
-    max-width: 350px;
+    max-width: 400px;
 }
 #img_q {
     width: 90%;
+    height: auto;
     margin: 0 auto;
-    max-width: 350px;
+    max-width: 500px;
 }
 .btn-answer, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
     background-color: #1f1f1f;
@@ -92,6 +94,7 @@ article {
 }
 .question-content {
     font-size: 16px;
+    font-weight: bold;
     color: #e9c600;
 }
 .rectangle {
@@ -137,7 +140,7 @@ article {
 }
 .result-mainTitle {
     font-size: 25px;
-    font-weight: 100;
+    font-weight: bold;
     color: #ebebeb;
 }
 .result-explain {
