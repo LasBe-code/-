@@ -55,6 +55,7 @@
         data-ad-width   = "320" 
         data-ad-height  = "100"></ins> 
     </article>
+<<<<<<< HEAD
 
     <article class="logo">
         <img class="mt-5 lasbe-logo" src="logo.png" alt="lasbe-logo">
@@ -62,12 +63,20 @@
     </article>
 
     <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+=======
+    <article class ="result">
+        <h3 id="subTitle" class = "text-center mt-5">~~하는 당신은</h3>
+        <h2 id="mainTitle" class = "text-center mt-5">xxx</h2>
+        <h3 id="explain" class = "text-center mt-5">설명</h3>
+    </article>
+>>>>>>> 78f8e7628e8e5eaf65a6ca49669bdb43a913196d
     <input id="score" type="hidden"  value="0">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script>
         var num = 1;
         var q = {
+<<<<<<< HEAD
             1: {"title": "팀원의 전적을 확인하니 승급전 중인 팀원이 있다.", "type": "score", "img": "1.jpg",
             "A": "평소보다 집중해서 게임을 한다", "B": "그냥 별 생각 없다. 하던대로 플레이한다", "C": "왜인지는 모르겠으나 웃음부터 나온다"},
             2: {"title": "게임 시작 직후의 행동", "type": "score", "img": "2.jpg",
@@ -117,6 +126,24 @@
             "explain": "", "img": "F.png"},
             "G": {"subTitle": "타인의 고통을 즐기는 당신은", "mainTitle": "<strong>사이코패스</strong>", 
             "explain": "", "img": "G.png"}
+=======
+            1: {"title": "문제 1번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            2: {"title": "문제 2번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            3: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            4: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            5: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            6: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            7: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            8: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            9: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            10: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            11: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            12: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            13: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            14: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            15: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+            16: {"title": "문제 3번", "type": "score", "A": "E", "B": "i", "C": "C"},
+>>>>>>> 78f8e7628e8e5eaf65a6ca49669bdb43a913196d
         }
         function start() {
             $(".start").hide();
@@ -145,6 +172,7 @@
             if(num == 17){
                 $(".question").hide();
                 $(".result").show();
+<<<<<<< HEAD
                 var resultScore = $("#score").val();
                 var perType = "";
                 if(resultScore<=3){perType = "A";}
@@ -161,6 +189,33 @@
             }
             else{
                 $("#img_q").attr("src", q[num]["img"]);
+=======
+                var resultScore = $("#score").val
+
+                if(resultScore<=3){
+
+                }
+                if(resultScore>=4 && resultScore<=7){
+
+                }
+                if(resultScore>=8 && resultScore<=13){
+
+                }
+                if(resultScore>=14 && resultScore<=19){
+
+                }
+                if(resultScore>=20 && resultScore<=24){
+
+                }
+                if(resultScore>=25 && resultScore<=28){
+
+                }
+                if(resultScore>=29){
+
+                }
+            }
+            else{
+>>>>>>> 78f8e7628e8e5eaf65a6ca49669bdb43a913196d
                 $(".progress-bar").attr('style', 'width: calc(100/16*'+num+'%)')
                 $("#title").html(q[num]["title"]);
                 $("#type").val(q[num]["type"]);
