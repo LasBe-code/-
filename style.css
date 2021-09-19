@@ -74,6 +74,10 @@ article {
     margin: 0 auto;
     max-width: 500px;
 }
+.loding {
+    width: 0;
+    height: 0;
+}
 .btn-answer, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
     background-color: #1f1f1f;
     border:#1f1f1f;
