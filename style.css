@@ -20,34 +20,38 @@ article {
     font-size: 14px;
     color: #7c7c7c;
 }
-.sub-title {
-    font-size: 24px;
-    font-weight: 100;
-    color: #ebebeb;
-}
+
 .start-cover {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.btn-start {
-    font-size: 16px;
-    color:#e9c600;
-    background-color: #1f1f1f;
-    border:#1f1f1f;
+.btn-start, .btn-start:visited {
+    font-size: 30px;
+    font-weight: bold;
+    color:#7c7c7c;
+    background-color: #1f1f1f; 
+    border:#7c7c7c;
+    border-width:4px; 
+    border-style:solid; 
+    border-radius: 15px;
+    padding-bottom: 1px;
+    width: 100%; max-width: 400px; margin: 0 auto;
 }
-.btn-start, .btn-start:visited, .btn-start:active {
-    font-size: 16px;
-    color:#e9c600;
-    background-color: #1f1f1f;
-    border:#1f1f1f;
+.btn-start:active, .btn-start:focus , .btn-start:hover{
+    font-size: 30px;
+    font-weight: bold;
+    outline: none !important;
+    background-color: #1f1f1f !important;
+    color:#e9c600 !important;
+    border:#e9c600;
+    border-width:4px; 
+    border-style:solid; 
+    border-radius: 15px;
+    padding-bottom: 1px;
+    width: 100%; max-width: 400px; margin: 0 auto;
 }
-.btn-start:active, .btn-start:focus , .btn-start:hover {
-    background-color: #ffee00 !important;
-    border:#1f1f1f !important;
-    font-size: 16px;
-    color:#ffffff;
-}
+
 /* 문제화면 */
 .question {
     display: none;
@@ -57,10 +61,14 @@ article {
     display: none;
 }
 .progress-bar {
+    width: 100%;
     background-color: #e9c600;
+    
 }
 .progress {
+    width: 100%;
     background-color: #525764;
+    margin: 0 auto;
 }
 #img {
     width: 90%;
@@ -78,34 +86,45 @@ article {
     width: 0;
     height: 0;
 }
-.btn-answer, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
+.btn-answer, .btn-answer:visited, .btn-answer:hover, .btn-answer:focus {
     background-color: #1f1f1f;
     border:#1f1f1f;
-    width: 288px;
+    width: 100%; max-width: 500px; margin: 0 auto;
     margin: 0 auto;
     font-size: 13px;
     color: #ffffff;
     outline: none;
 }
-.btn-answer:hover {
-    background-color: #e9c600 !important;
+.btn-answer:active {
+    background-color: #e9c600;
     border:#1f1f1f !important;
-    width: 288px;
+    width: 100%; max-width: 500px; margin: 0 auto;
     margin: 0 auto;
     font-size: 13px;
     color: #ffffff;
     outline: none;
 }
 .question-content {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    color: #e9c600;
+    color: #ffffff;
+    border:#383a43; 
+    border-width:4px; 
+    border-style:solid; 
+    border-radius: 5px; 
+    padding: 5px; 
+    border-spacing: 5px; 
+    background-color: #383a43; 
+    width: 100%;
+    max-width: 500px; 
+    margin: 0 auto;
 }
 .rectangle {
-    width: 288px;
+    width: 100%; max-width: 500px; margin: 0 auto;
     height: 8px;
     background-color: #383a43;
     margin: 0 auto;
+    border-radius: 20px;
 }
 .rectangle_q {
     width: 15px;
@@ -114,7 +133,7 @@ article {
     margin: 0 auto;
 }
 .mid-rectangle {
-    width: 288px;
+    width: 100%; max-width: 500px; margin: 0 auto;
     height: 1px;
     background-color: #383a43;
     margin: 0 auto;
@@ -153,6 +172,6 @@ article {
     color: #e9c600;
 }
 .kakao_ad {
-    width: 320px;
+    width: 100%; max-width: 500px; margin: 0 auto;
     margin: 0 auto;
 }
