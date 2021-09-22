@@ -150,11 +150,15 @@ article {
     background-color: #ffe02d;
     margin: 0 auto;
 }
-.result-message {
-    color: #e9c600;
+.result-comment {
+    border:#ffffff; 
+    border-width:2px; 
+    border-style:solid; 
+    border-radius: 15px; 
+    padding-bottom: 1px; 
+    width: 100%;
+    max-width: 400px; 
     margin: 0 auto;
-    font-size: 24px;
-    font-weight: 100;
 }
 .result-subTitle {
     font-size: 16px;

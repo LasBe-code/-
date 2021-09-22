@@ -19,7 +19,7 @@
         <h1 class="main-title mt-5 text-center">롤 심리테스트</h1>
         <img src="main.png" style="width: 100%; max-width: 500px; margin: 0 auto;" class="mt-5">
         <div class="start-cover">
-            <button type="button" class="btn-start btn mt-5 mb-5" onclick='start();'>PLAY</button>
+            <button type="button" class="btn-start btn mb-5" onclick='start();'>PLAY</button>
         </div>
     </article>
     <article class="question">
@@ -37,12 +37,13 @@
         <div class="rectangle"></div>
     </article>
     <article class ="result">
-        <div class="rectangle-r mt-3"></div>
-        <span class="result-message mt-2 mb-2">협곡에서 알아보는 나의 성향은?</span>
-        <div class="rectangle-r"></div>
+        <img src="mainResult.png" style="width: 30%; max-width: 300px; margin: 0 auto;" class="mt-3">
         <img id = "img" class = "mt-3" src="A.png" alt = "profile">
-        <h3 id="subTitle" class = "result-subTitle text-center mt-5">~~하는 당신은</h3>
-        <h2 id="mainTitle" class = "result-mainTitle text-center mt-2">xxx</h2>
+        <div class="result-comment mt-2 mb-2">
+            <h3 id="subTitle" class = "result-subTitle text-center mt-2">~~하는 당신은</h3>
+            <h2 id="mainTitle" class = "result-mainTitle text-center mt-2 mb-2">xxx</h2>
+        </div>
+        
         <div class="rectangle mt-2"></div>
         <h3 id="explain" class = "result-explain text-center mt-3 mb-3">설명</h3>
         <div class="share addthis_inline_share_toolbox"></div>
@@ -124,12 +125,12 @@
             "explain": "인내심이 좋은 편이에요.<br>어른들이 좋아하는 성격을 가지고 있어요.<br>긍정적인 시각을 가지고 있어요.", "img": "B.png"},
             "C": {"subTitle": "화합을 도모하는 당신은", "mainTitle": "중재자", 
             "explain": "상황에 맞게 판단할 수 있는 통찰력이 있어요.<br>타인과의 협력과 협동을 보다 잘 하는 편이에요.<br>누군가가 싸운다면 중간에서 화해를 이끌어내요.", "img": "C.png"},
-            "D": {"subTitle": "게임을 게임답게", "mainTitle": "즐기는 자", 
-            "explain": "뛰어난 상황 적응력을 가지고 있어요.<br>모임에서 분위기를 고조시키는 편이에요.<br>호불호가 명확한 편이에요.", "img": "D.png"},
-            "E": {"subTitle": "승리를 위해 달리는 당신은", "mainTitle": "경주마", 
-            "explain": "합리적인 판단으로 사람들을 이끄는 편이에요.<br>뚜렷한 주관으로 비전을 세우고 열심히 노력하는 편이에요.<br>대화로 사람들을 설득하는 편이에요.", "img": "E.png"},
+            "D": {"subTitle": "사교적인 인싸", "mainTitle": "즐겜러", 
+            "explain": "게임을 게임답게 즐길 줄 알아요.<br>뛰어난 상황 적응력을 가지고 있어요.<br>모임에서 분위기를 고조시키는 편이에요.<br>호불호가 명확한 편이에요.", "img": "D.png"},
+            "E": {"subTitle": "직관적이고 열정적인", "mainTitle": "지휘자", 
+            "explain": "주로 오더를 내리는 편이에요.<br>합리적인 판단으로 사람들을 이끄는 편이에요.<br>뚜렷한 주관으로 비전을 세우고 열심히 노력하는 편이에요.<br>대화로 사람들을 설득하는 편이에요.", "img": "E.png"},
             "F": {"subTitle": "막을 수 없는 당신은", "mainTitle": "불도저", 
-            "explain": "자신만의 옳고 그름이 명확해요.<br>상대가 누구던 토론하는 것을 주저하지 않아요.<br>일이 생기면 신속하게 처리하는 것을 중요시해요.<br>때론 이런 성격이 큰 성공을 안겨주지만, 주변 사람을 지치게해요.", "img": "F.png"},
+            "explain": "자신만의 옳고 그름이 명확해요.<br>답답한 것을 정말 싫어해요.<br>일이 생기면 신속하게 처리하는 것을 중요시해요.<br>때론 이런 성격이 큰 성공을 안겨주지만, 주변 사람을 지치게해요.", "img": "F.png"},
             "G": {"subTitle": "타인의 고통을 즐기는 당신은", "mainTitle": "사이코패스", 
             "explain": "보통 인터넷 세상 밖에서는 정상인 편이에요.<br>자기 주장이 강한편이에요.<br>인내심을 조금 더 기르면 더 큰 곳을 바라볼 수 있어요.", "img": "G.png"}
         }
@@ -162,13 +163,20 @@
                 $(".result").show();
                 var resultScore = $("#score").val();
                 var perType = "";
-                if(resultScore<=3){perType = "A";}
-                if(resultScore>=4 && resultScore<=7){perType = "B";}
-                if(resultScore>=8 && resultScore<=13){perType = "C";}
-                if(resultScore>=14 && resultScore<=18){perType = "D";}
-                if(resultScore>=19 && resultScore<=23){perType = "E";}
-                if(resultScore>=24 && resultScore<=27){perType = "F";}
-                if(resultScore>=28){perType ="G";}
+                if(resultScore<=3){
+                    perType = "A"; $("meta[property='og:image'").attr("content", 'https://lolpersonalitytest.netlify.app/resultA.jpg');}
+                if(resultScore>=4 && resultScore<=6){
+                    perType = "B"; $("meta[property='og:image'").attr("content", 'https://lolpersonalitytest.netlify.app/resultB.jpg');}
+                if(resultScore>=7 && resultScore<=10){
+                    perType = "C"; $("meta[property='og:image'").attr("content", 'https://lolpersonalitytest.netlify.app/resultC.jpg');}
+                if(resultScore>=11 && resultScore<=14){
+                    perType = "D"; $("meta[property='og:image'").attr("content", 'https://lolpersonalitytest.netlify.app/resultD.jpg');}
+                if(resultScore>=15 && resultScore<=18){
+                    perType = "E"; $("meta[property='og:image'").attr("content", 'https://lolpersonalitytest.netlify.app/resultE.jpg');}
+                if(resultScore>=19 && resultScore<=22){
+                    perType = "F"; $("meta[property='og:image'").attr("content", 'https://lolpersonalitytest.netlify.app/resultF.jpg');}
+                if(resultScore>=23){
+                    perType = "G"; $("meta[property='og:image'").attr("content", 'https://lolpersonalitytest.netlify.app/resultG.jpg');}
                 $("#img").attr("src", result[perType]["img"]);
                 $("#subTitle").html(result[perType]["subTitle"]);
                 $("#mainTitle").html(result[perType]["mainTitle"]);
@@ -185,6 +193,7 @@
                 num++;
             }
         }
+        
     </script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6145fcd7eeea8f34"></script>
 </body>
