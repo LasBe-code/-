@@ -1,14 +1,13 @@
 # PersonalityTest
 
 # ⚡️롤 심리테스트
-[롤 심리테스트 링크](https://lolpersonalitytest.netlify.app/)
 
 유행하는 심리테스트, 저도 만들어보고 싶어서 가장 유행하는 게임인 리그 오브 레전드를 주제로 간단히 만들어봤습니다.
 
 HTML/CSS, JavaScript, jQuery로 정적인 페이지를 만들어 Netlify로 배포했습니다.
 
 구글 서치콘솔과 네이버 서치마스터에 robots, sitemap을 등록해 검색 시 노출될 수 있도록 하였고, 카카오 애드핏을 연동해 수익을 낼 수 있도록 했습니다.
-
+- [🔗롤 심리테스트 링크](https://lolpersonalitytest.netlify.app/)
 - **제작기간 : 2021.09.24 ~ 2021.09.26**
 # 📌 배포 후 현재까지 광고수입
 
